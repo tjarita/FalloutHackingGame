@@ -40,14 +40,15 @@ int main(int argc, char** argv) {
 
     //----Open File----
     ifstream readBank;
+    char *file = argv[1];
     while (!readBank.is_open()) { // Keep asking for file name if not open
         try {
-            readBank.open(argv[1]);
+            readBank.open(file);
             if (!readBank.good())
                 throw 1;
         } catch (int x) {
             cout << "BAD FILE NAME! Please re enter.\n";
-            cin >> argv[1];
+            cin.getline(file,50);
         }
     }
     //----Fill Word Bank----
