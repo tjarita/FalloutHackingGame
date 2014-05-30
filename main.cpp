@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
             if (!readBank.good())
                 throw 1;
         } catch (int x) {
-            cout << "BAD FILE NAME! Please re enter.\n";
+            cout << "BAD FILE NAME! Please re enter. " << file<< "\n";
             cin.getline(file,50);
         }
     }
@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
 
     //----Print Possible Words----
     for (int i = 0; i < 10; i++) //                                                                                                     DEBUG
-        cout << "Possible word #" << i << " " << possible[i] << endl;
+        cout << "Possible word #" << i+1 << " " << possible[i] << endl;
 
     //----Get Guess----
     int cc = 0; // Correct Count
