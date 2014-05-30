@@ -18,7 +18,7 @@
 using namespace std;
 
 /*
- *      Usage : mastermind enable1.txt
+ *      Usage : mm enable1.txt
  */
 
 int main(int argc, char** argv) {
