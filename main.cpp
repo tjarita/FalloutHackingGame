@@ -42,12 +42,15 @@ int main(int argc, char** argv) {
     ifstream readBank;
     char *file = argv[1];
     while (!readBank.is_open()) { // Keep asking for file name if not open
-        readBank.open(file);
-        if (!readBank.good())
-            cout << "BAD FILE NAME! Please re enter. " << file << "\n";
-        cin.getline(file, 50);
+        try {
+            readBank.open(file);
+            if (!readBank.good())
+                throw 1;
+        } catch (int x) {
+            cout << "BAD FILE NAME! Please re enter\n";
+            cin.getline(file,50);
+        }
     }
-    
     //----Fill Word Bank----
     while (readBank.good()) {
         string line;
@@ -80,7 +83,7 @@ int main(int argc, char** argv) {
 
     //----Print Possible Words----
     for (int i = 0; i < 10; i++) //                                                                                                     DEBUG
-        cout << "Possible word #" << i + 1 << " " << possible[i] << endl;
+        cout << "Possible word #" << i+1 << " " << possible[i] << endl;
 
     //----Get Guess----
     int cc = 0; // Correct Count
