@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Toshikz
+ * Author: Toshiki Arita
  *
  * Created on May 28, 2014, 4:11 AM
  */
