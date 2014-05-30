@@ -11,3 +11,5 @@ The objective is to correctly guess the word from a list. Hints are given in how
 Note - You can use any word bank assuming words have newlines. Simply replace enable1.txt with your own file.
 
 
+Source:
+http://www.reddit.com/r/dailyprogrammer/comments/263dp1/5212014_challenge_163_intermediate_fallouts/
